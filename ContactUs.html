@@ -1,64 +1,207 @@
 <!Doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-   <!-- Font awesome css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    
-   <link rel="stylesheet" type="text/css" href="NAV.css"> 
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Anavkar's Arts | About Us</title>
-   
-  </head>
-  <body class="back">
-<!-- Header video -->
-<div class="overlay"><span style="font-size:60px;cursor:pointer;display: block;color: yellow;font-weight: bold;display: block;" class="fixed-top"id="button" onclick="openNav()">&#9776;</span></div>
-    <!-- The sidebar -->
+  <!-- Font awesome css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" id="close"onclick="closeNav()">&times;</a>
-  <a href="index.html">Home</a>
-  <a href="AboutUs.html">About</a>
-  <a href="javascript:alert('Coming Soon');">Testimonials
-  </a>
-  <a href="ContactUs.html" class="active">Contact</a>
-</div>
+  <link rel="stylesheet" type="text/css" href="NAV.css">
 
-<div id="main">
+  <link rel="stylesheet" type="text/css" href="contact.css">
 
-  <!-- <div class="navbar navbar-expand-lg navbar-brand bg-light card ">Anavkar's Arts</div> -->
-  <!-- <span style="font-size:20px;cursor:pointer;display: block;" onclick="openNav() openbtn()" id="open">&#9776;</span> -->
- 
-  
-</div>
+  <title>Anavkar's Arts | About Us</title>
 
-<script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "200px";
-  document.getElementById("main").style.marginLeft = "200px";
-  document.getElementById("button").style.display="none";
-  
-}
-
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("button").style.display="block";
-  document.getElementById("main").style.marginLeft= "0";
- 
-}
+</head>
+<style type="text/css">
+  .bgimage {
+    width: 100%;
+    height: 500px;
+    background: url('https://images.unsplash.com/photo-1438109491414-7198515b166b?q=80&fm=jpg&s=cbdabf7a79c087a0b060670a6d79726c');
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
 
 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
 
-</script>
+  .bgimage h1 {
+    color: white;
+    text-shadow: 2px 2px #333;
+    text-align: center;
+    text-decoration-color: red;
+  }
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-   
-  </body>
+  .bg-text {
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+</style>
+
+<body class="back">
+
+  <!-- Header video -->
+  <header>
+
+    <div class="overlay"><span
+        style="font-size:60px;cursor:pointer;display: block;color: yellow;font-weight: bold;display: block;"
+        class="fixed-top" id="button" onclick="openNav()">&#9776;</span></div>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" id="close" onclick="closeNav()">&times;</a>
+      <a href="index.html">Home</a>
+      <a href="AboutUs.html">About</a>
+      <a href="javascript:alert('Coming Soon');">Testimonials
+      </a>
+      <a href="ContactUs.html" class="active">Contact</a>
+    </div><!-- The sidebar -->
+    <section class="bgimage">
+      <div class="container-fluid">
+        <div class="row">
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bg-text" id="hide">
+      <h1> Contact Us</h1>
+    </div>
+  </header>
+
+  <!-- FORM BEGINS HERE -->
+  <div class="container contact-form container-fluid">
+    <div class="contact-image">
+      <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact" />
+    </div>
+    <form action="mailto:dubeyvishal917@gmail.com">
+      <h3>Drop Us a Message</h3>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <input type="text" name="txtName" class="form-control" placeholder="Your Name *" value="" />
+          </div>
+          <div class="form-group">
+            <input type="text" name="txtEmail" class="form-control" placeholder="Your Email *" value="" />
+          </div>
+          <div class="form-group">
+            <input type="text" name="txtPhone" class="form-control" placeholder="Your Phone Number *" value="" />
+          </div>
+          <div class="form-group">
+            <input type="submit" name="btnSubmit" class="btnContact" value="submit" />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <textarea name="txtMsg" class="form-control" placeholder="Your Message *"
+              style="width: 100%; height: 150px;"></textarea>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="map container container-fluid  card-bg rounded" style="padding-bottom: 50px;padding-top: 50px;">
+    <div id="markermap" style="width: 100%;height: 350px;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1289.1852437252546!2d72.97286104624934!3d19.254774683902518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5982a3f5fcf8d222!2sGreen%20Acres%201!5e0!3m2!1sen!2sin!4v1604157766402!5m2!1sen!2sin"
+        frameborder="0" style="width: 100%;height: 350px;" allowfullscreen></iframe>
+    </div>
+    </div>
+    <section id="footer" class="card">
+      <div class="container container-fluid  ">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+            <ul class="list-unstyled list-inline social text-center p-1">
+              <li class="list-inline-item"><a href="#"><i
+                    class="fa fa-facebook"></i></a></li>
+              <li class="list-inline-item"><a href="#"><i
+                    class="fa fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a href="#"><i
+                    class="fa fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href="#"><i
+                    class="fa fa-google-plus"></i></a></li>
+              <li class="list-inline-item"><a href="#" target="_blank"><i
+                    class="fa fa-envelope"></i></a></li>
+              <li class="list-inline-item">
+                <a href="+91-9869443758">&nbsp;<i class="fa fa-whatsapp"></i></a></li>
+            </ul>
+          </div>
+          <hr>
+          <div class="row">
+            <!-- <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white  text-align">
+
+              <p class="h6">© All right Reversed.<a class="text-green ml-2" href="https://github.com/aceandro2812"
+                  target="_blank">ACEANDRO/VISHALANYNOMOUS/KAUSTUBH-09</a></p>
+            </div> -->
+            <hr>
+          </div>
+        </div>
+    </section>
+
+
+    <!-- FORM ENDS HERE -->
+
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "200px";
+        // document.getElementById("main").style.marginleft = "200px";
+        document.getElementById("button").style.display = "none";
+        document.getElementById("hide").style.transition = ".9s";
+        document.getElementById("hide").style.display = "none";
+
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("button").style.display = "block";
+        // document.getElementById("main").style.marginleft = "0";
+        document.getElementById("hide").style.transition = ".9s";
+        document.getElementById("hide").style.display = " block";
+
+      }
+
+
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+      integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+      crossorigin="anonymous"></script>
+
+</body>
+
 </html>
